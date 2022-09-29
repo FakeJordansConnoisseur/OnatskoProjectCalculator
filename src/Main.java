@@ -37,7 +37,8 @@ public class Main {
         System.out.println("The total you will pay is:"+actualCost);
         //Calculating all the costs in the print statements
 
-        System.out.println("The bill before tips per person is:"+(totalCost/peopleCount));
+        String beforeAmountPer = formatter.format((totalCost/peopleCount));
+        System.out.println("The bill before tips per person is:"+ beforeAmountPer);
 
         String tipAmountPer = formatter.format((((((tip/100)+1)*totalCost)-totalCost))/peopleCount);
         System.out.println("The tip each person will pay is:"+tipAmountPer);
